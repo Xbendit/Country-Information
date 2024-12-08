@@ -10,14 +10,12 @@ function App() {
     const [country, setCountry] = useState([])
     const [visable, setVisable] = useState([true])
 
-
     async function fetchData() {
 
         try {
             const response = await axios.get('https://restcountries.com/v3.1/all');
             setCountry(response.data)
             setVisable(false)
-
         } catch (e) {
             console.error(e);
         }
@@ -36,8 +34,6 @@ function App() {
             const result = await axios.get(`https://restcountries.com/v3.1/name/${inputValue}`);
             console.log(result.data)
             setInputCountry(result.data)
-
-
         } catch (e) {
             console.error(e)
         }
@@ -47,8 +43,7 @@ function App() {
     return (
         <>
             <body>
-
-             <section>
+            <section>
                 <img
                     className="Worldmap"
                     src={worldMap}
@@ -68,13 +63,12 @@ function App() {
                     >Click hier voor alle landen
                     </button>
                 )}
-
-                {console.log(country)}
                 <ul>
                     {country.sort((a, b) => a.population - b.population).map((countries) => {
                         return (
                             <li key={countries.name.common}>
-                                <img src={countries.flags.png}/> <span style={{ color: countryColor(countries.region)}}>{countries.name.common}</span> has
+                                <img src={countries.flags.png}/> <span
+                                style={{color: countryColor(countries.region)}}>{countries.name.common}</span> has
                                 population of {countries.population} people.
                             </li>
                         )
@@ -126,10 +120,8 @@ function App() {
                     )
                 })}
             </section>
-
             </body>
         </>
-
     );
 }
 
