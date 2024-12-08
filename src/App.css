@@ -1,0 +1,32 @@
+.Worldmap{
+    height: 500px;
+}
+.Spinmap{
+    height: 500px;
+}
+.titleworldregions{
+    text-align: center;
+    font-size: 40px;
+}
+.search{
+    text-align: center;
+    font-size: 40px;
+}
+ul {
+    list-style: none;
+}
+.countrytag{
+    font-size: 20px;
+}
+section {
+    display: flex;
+    flex-direction: column; /* Plaatst items verticaal */
+    align-items: center;    /* Centreert horizontaal */
+    justify-content: center; /* Centreert verticaal */
+    text-align: center;     /* Zorgt dat tekst gecentreerd is */
+    margin: 20px auto;      /* Voegt ruimte toe rond secties */
+}
+/*
+.button1{
+    display: none;
+}*/
